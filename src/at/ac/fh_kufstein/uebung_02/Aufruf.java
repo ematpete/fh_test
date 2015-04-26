@@ -20,6 +20,7 @@ public class Aufruf
         Auto audi = new Auto ((short)4, "schwarz", (short)180, (short)5, (short)8);
         Wasserfahrzeug titanic = new Wasserfahrzeug ((short)0, "blau", (short)51000, (short)0, (double)10.54,(short)3, (double)100000 );
         
+        
         System.out.println(bmw.toString());
         System.out.println(audi.toString());
         System.out.println(titanic.toString());
