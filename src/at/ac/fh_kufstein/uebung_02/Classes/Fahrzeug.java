@@ -12,25 +12,34 @@ package at.ac.fh_kufstein.uebung_02.Classes;
 public class Fahrzeug 
 {
 
-    public Fahrzeug(short r, String f, short p, short t) 
+    public Fahrzeug(short r, Farbe f, short p, short t) 
     {
         Reifen = r;
         Farbe = f;
         PS = p;
         Tueren = t;
-        
-        
         Anzahl = Anzahl++;
     }
+
+    public Fahrzeug(short Reifen, short PS, int Tueren) {
+        this.Reifen = Reifen;
+        this.PS = PS;
+        this.Tueren = Tueren;
+        this.Farbe = Farbe.black;
+    }
+    
+    
     
     private short Reifen;
-    private String Farbe;
+    private Farbe Farbe;
     private short PS;
     private int Tueren;
     private boolean Gestartet = false;
     private short Geschwindigkeit = 0;
     public static int Anzahl = 0;
-
+    
+    
+    
     public short getReifen() 
     {
         return Reifen;
@@ -41,12 +50,12 @@ public class Fahrzeug
         this.Reifen = Reifen;
     }
 
-    public String getFarbe() 
+    public Farbe getFarbe() 
     {
         return Farbe;
     }
 
-    public void setFarbe(String Farbe) 
+    public void setFarbe(Farbe Farbe) 
     {
         this.Farbe = Farbe;
     }

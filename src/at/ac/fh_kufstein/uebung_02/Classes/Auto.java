@@ -9,17 +9,28 @@ package at.ac.fh_kufstein.uebung_02.Classes;
  *
  * @author Peter
  */
-public class Auto extends Fahrzeug 
+public class Auto extends Fahrzeug implements Comparable <Auto>
 {
 
-    public Auto(short r, String f, short p, short t, short ai) 
+    public Auto(short r, Farbe f, short p, short t, short ai) 
     {
         super(r, f, p, t);
         Airbags = ai;
+       
     }
+
+    public Auto(short r, short p, short t, short Airbags) {
+        super(r, Farbe.black, p, t);
+        this.Airbags = Airbags;
+    }
+
+    
+    
+    
     
     private boolean Klimaanlage = false;
     private short Airbags;
+    
     
     public boolean getKlimaanlage() 
     {
@@ -72,6 +83,26 @@ public class Auto extends Fahrzeug
     {
         return "Mein Auto hat "+this.getPS()+" PS und fährt mit "+this.getGeschwindigkeit()+" km/h";
     }
+
+
+
+    @Override
+    public int compareTo(Auto t) 
+    {
+        if(this.getPS()==t.getPS())
+        {
+            return 0;
+        }
+        else if(this.getPS()<t.getPS())
+        {
+            return -1;        
+        }
+        else
+        {
+            return 1;
+        }
+    }
+    
     
    
     

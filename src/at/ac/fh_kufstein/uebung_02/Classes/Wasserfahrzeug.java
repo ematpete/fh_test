@@ -12,7 +12,7 @@ package at.ac.fh_kufstein.uebung_02.Classes;
 public class Wasserfahrzeug extends Fahrzeug 
 {
 
-    public Wasserfahrzeug(short r, String f, short p, short t, double ti, short s, double l) 
+    public Wasserfahrzeug(short r, Farbe f, short p, short t, double ti, short s, double l) 
     {
         super(r, f, p, t);
         Tiefgang = ti;
